@@ -1,12 +1,18 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const FriendDetails = () => {
-    const details = useLoaderData()
-    console.log(details)
+    const details = useLoaderData() ;
+    const navigate = useNavigate();
+    const handleBack = () => {
+        navigate(-1)
+    }
     return (
-        <div>
-            <h1>Friend Details is here </h1>
+        <div className='mx-auto w-[300px] my-5 bg-green-300 p-5'>
+            <h1>ID : {details.id}</h1>
+            <h1>Name : {details.name}</h1>
+            <h4>Email : {details.email}</h4>
+            <button onClick={handleBack} className='bg-green-100 p-2' > Back </button>
         </div>
     );
 };

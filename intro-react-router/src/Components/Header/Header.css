@@ -3,8 +3,9 @@ a{
     font-size: 30px;
     text-decoration: none;
     padding: 10px;
-    color: rgb(109, 7, 192);
 }
-a:hover {
-    color: green;
+
+.active{
+    background-color: green ;
+    
 }

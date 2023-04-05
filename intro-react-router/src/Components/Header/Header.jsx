@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Header.css"  ;
+import ActiveLInk from '../ActiveLInk/ActiveLInk';
 
 const Header = () => {
     return (
-        <nav>
-            <Link to = "/">Home</Link>
-            <Link to = "/contact">Contact</Link>
-            <Link to = "/about">About</Link>
-            <Link to = "/friends">Friends</Link>
-            <Link to = "/blog">blog</Link>
+        <nav className='text-red-400'>
+            <ActiveLInk to = "/">Home</ActiveLInk>
+            <ActiveLInk to = "/contact">Contact</ActiveLInk>
+            <ActiveLInk to = "/about">About</ActiveLInk>
+            <ActiveLInk to = "/friends">Friends</ActiveLInk>
+            <ActiveLInk to = "/posts">Posts</ActiveLInk>
+            <ActiveLInk to = "/blog">blog</ActiveLInk>
         </nav>
     );
 };
